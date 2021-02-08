@@ -1,7 +1,7 @@
 package com.example.currencyconverter.di
 
 import com.example.currencyconverter.data.CurrencyServices
-import com.example.currencyconverter.utils.Constants
+import com.example.currencyconverter.util.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
