@@ -24,7 +24,7 @@ class MainViewModel @ViewModelInject constructor(
     }
 
     private val _uiState = MutableStateFlow<CurrencyEvents>(CurrencyEvents.Idle)
-    private val uiState: StateFlow<CurrencyEvents> = _uiState
+    val uiState: StateFlow<CurrencyEvents> = _uiState
 
     fun convertCurrency(
         convertAmount: String,
@@ -49,7 +49,7 @@ class MainViewModel @ViewModelInject constructor(
                     } else {
                         val convertedAmount = round(fromAmount * rate * 100) / 100
                         _uiState.value = CurrencyEvents.Success(
-                            "$fromAmount $fromCurrency = $convertAmount $toCurrency"
+                            "$fromAmount $fromCurrency = $convertedAmount $toCurrency"
                         )
                     }
                 }

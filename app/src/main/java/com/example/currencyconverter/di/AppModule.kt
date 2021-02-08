@@ -2,6 +2,7 @@ package com.example.currencyconverter.di
 
 import com.example.currencyconverter.data.CurrencyServices
 import com.example.currencyconverter.main.MainRepository
+import com.example.currencyconverter.main.MainRepositoryServices
 import com.example.currencyconverter.util.Constants
 import com.example.currencyconverter.util.DispatcherProvider
 import dagger.Module
@@ -29,7 +30,7 @@ object AppModule {
     @Provides
     fun provideMainRepository(
         services: CurrencyServices
-    ): MainRepository = MainRepository(services)
+    ): MainRepositoryServices = MainRepository(services)
 
     @Singleton
     @Provides
